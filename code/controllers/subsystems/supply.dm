@@ -114,7 +114,7 @@ SUBSYSTEM_DEF(supply)
 						var/obj/item/I = A
 						var/price = get_value(I)
 						if(price >= 0 )
-							add_points_from_source(price)
+							add_points_from_source(price / 2)
 						continue	
 
 					// Must sell ore detector disks in crates
