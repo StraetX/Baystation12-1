@@ -11,7 +11,7 @@
 					/obj/item/weapon/reagent_containers/food/snacks/meat = 4,
 					/obj/item/weapon/reagent_containers/food/condiment/enzyme = 1
 					)
-	cost = 10
+	cost = 300
 	containertype = /obj/structure/closet/crate/freezer
 	containername = "kitchen supplies crate"
 
@@ -20,21 +20,21 @@
 	contains = list(/obj/item/weapon/reagent_containers/food/snacks/meat/beef = 6)
 	containertype = /obj/structure/closet/crate/freezer
 	containername = "cow meat crate"
-	cost = 20
+	cost = 200
 
 /decl/hierarchy/supply_pack/galley/goat
 	name = "Perishables - Goat meat"
 	contains = list(/obj/item/weapon/reagent_containers/food/snacks/meat/goat = 6)
 	containertype = /obj/structure/closet/crate/freezer
 	containername = "goat meat crate"
-	cost = 20
+	cost = 200
 
 /decl/hierarchy/supply_pack/galley/chicken
 	name = "Perishables - Poultry"
 	contains = list(/obj/item/weapon/reagent_containers/food/snacks/meat/chicken = 6)
 	containertype = /obj/structure/closet/crate/freezer
 	containername = "chicken meat crate"
-	cost = 20
+	cost = 200
 
 /decl/hierarchy/supply_pack/galley/seafood
 	name = "Perishables - Seafood"
@@ -45,21 +45,21 @@
 		)
 	containertype = /obj/structure/closet/crate/freezer
 	containername = "seafood crate"
-	cost = 20
+	cost = 200
 
 /decl/hierarchy/supply_pack/galley/eggs
 	name = "Perishables - Eggs"
 	contains = list(/obj/item/weapon/storage/fancy/egg_box = 2)
 	containertype = /obj/structure/closet/crate/freezer
 	containername = "egg crate"
-	cost = 15
+	cost = 150
 
 /decl/hierarchy/supply_pack/galley/milk
 	name = "Perishables - Milk"
 	contains = list(/obj/item/weapon/reagent_containers/food/drinks/milk = 3)
 	containertype = /obj/structure/closet/crate/freezer
 	containername = "milk crate"
-	cost = 15
+	cost = 150
 
 /decl/hierarchy/supply_pack/galley/pizza
 	num_contained = 5
@@ -68,7 +68,7 @@
 					/obj/item/pizzabox/mushroom,
 					/obj/item/pizzabox/meat,
 					/obj/item/pizzabox/vegetable)
-	cost = 15
+	cost = 150
 	containertype = /obj/structure/closet/crate/freezer
 	containername = "pizza crate"
 	supply_method = /decl/supply_method/randomized
@@ -86,7 +86,7 @@
 					/obj/item/weapon/storage/mre/menu8,
 					/obj/item/weapon/storage/mre/menu9,
 					/obj/item/weapon/storage/mre/menu10)
-	cost = 30
+	cost = 300
 	containertype = /obj/structure/closet/crate/freezer
 	containername = "emergency rations"
 	supply_method = /decl/supply_method/randomized
@@ -108,7 +108,7 @@
 			/obj/item/weapon/storage/box/glowsticks = 2,
 			/obj/item/weapon/clothingbag/rubbermask,
 			/obj/item/weapon/clothingbag/rubbersuit)
-	cost = 20
+	cost = 200
 	containername = "party equipment crate"
 
 // TODO; Add more premium drinks at a later date. Could be useful for diplomatic events or fancy parties.
@@ -116,7 +116,7 @@
 	name = "Bar - Premium drinks"
 	contains = list(/obj/item/weapon/reagent_containers/food/drinks/bottle/premiumwine = 1,
 					/obj/item/weapon/reagent_containers/food/drinks/bottle/premiumvodka = 1)
-	cost = 60
+	cost = 600
 	containertype = /obj/structure/closet/crate/freezer
 	containername = "premium drinks crate"
 
@@ -135,7 +135,7 @@
 			/obj/item/weapon/storage/box/glass_extras/straws,
 			/obj/item/weapon/storage/box/glass_extras/sticks
 			)
-	cost = 10
+	cost = 100
 	containername = "bar supplies crate"
 
 /decl/hierarchy/supply_pack/galley/beer_dispenser
@@ -143,7 +143,7 @@
 	contains = list(
 			/obj/machinery/chemical_dispenser/bar_alc{anchored = 0}
 		)
-	cost = 25
+	cost = 250
 	containertype = /obj/structure/largecrate
 	containername = "booze dispenser crate"
 
@@ -152,6 +152,6 @@
 	contains = list(
 			/obj/machinery/chemical_dispenser/bar_soft{anchored = 0}
 		)
-	cost = 25
+	cost = 250
 	containertype = /obj/structure/largecrate
 	containername = "soda dispenser crate"

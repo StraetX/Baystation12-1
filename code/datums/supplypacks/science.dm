@@ -6,14 +6,14 @@
 	contains = list(
 			/obj/machinery/chemical_dispenser{anchored = 0}
 		)
-	cost = 25
+	cost = 250
 	containertype = /obj/structure/largecrate
 	containername = "reagent dispenser crate"
 
 /decl/hierarchy/supply_pack/science/coolanttank
 	name = "Liquid - Coolant tank"
 	contains = list(/obj/structure/reagent_dispensers/coolanttank)
-	cost = 16
+	cost = 250
 	containertype = /obj/structure/largecrate
 	containername = "coolant tank crate"
 
@@ -23,7 +23,7 @@
 					/obj/item/weapon/storage/toolbox/electrical,
 					/obj/item/device/flash = 4,
 					/obj/item/weapon/cell/high = 2)
-	cost = 10
+	cost = 250
 	containertype = /obj/structure/closet/crate/secure/gear
 	containername = "robotics assembly crate"
 	access = access_robotics
@@ -34,7 +34,7 @@
 					/obj/item/device/assembly/igniter = 3,
 					/obj/item/device/assembly/prox_sensor = 3,
 					/obj/item/device/assembly/timer = 3)
-	cost = 10
+	cost = 300
 	containertype = /obj/structure/closet/crate/secure/phoron
 	containername = "phoron assembly crate"
 	access = access_tox_storage
@@ -42,7 +42,7 @@
 /decl/hierarchy/supply_pack/science/scanner_module
 	name = "Electronics - Reagent scanner modules"
 	contains = list(/obj/item/weapon/stock_parts/computer/scanner/reagent = 4)
-	cost = 20
+	cost = 450
 	containername = "reagent scanner module crate"
 
 /decl/hierarchy/supply_pack/science/minergear
@@ -61,7 +61,7 @@
 					/obj/item/device/scanner/mining,
 					/obj/item/clothing/glasses/material,
 					/obj/item/clothing/glasses/meson)
-	cost = 15
+	cost = 350
 	containertype = /obj/structure/closet/crate/secure
 	containername = "shaft miner equipment crate"
 	access = access_mining
@@ -71,12 +71,12 @@
 	contains = list(/obj/item/device/flashlight/lamp/floodlamp,
 					/obj/item/device/flashlight/lamp/floodlamp/green)
 	name = "Equipment - Flood lamps"
-	cost = 20
+	cost = 250
 	containername = "flood lamp crate"
 	supply_method = /decl/supply_method/randomized
 
 /decl/hierarchy/supply_pack/science/illuminate
 	name = "Gear - Illumination grenades"
 	contains = list(/obj/item/weapon/grenade/light = 8)
-	cost = 20
+	cost = 200
 	containername = "illumination grenade crate"

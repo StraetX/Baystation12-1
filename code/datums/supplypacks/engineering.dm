@@ -4,31 +4,31 @@
 /decl/hierarchy/supply_pack/engineering/smes_circuit
 	name = "Electronics - Superconducting magnetic energy storage unit circuitry"
 	contains = list(/obj/item/weapon/stock_parts/circuitboard/smes)
-	cost = 20
+	cost = 200
 	containername = "superconducting magnetic energy storage unit circuitry crate"
 
 /decl/hierarchy/supply_pack/engineering/smescoil
 	name = "Parts - Superconductive magnetic coil"
 	contains = list(/obj/item/weapon/stock_parts/smes_coil)
-	cost = 35
+	cost = 350
 	containername = "superconductive magnetic coil crate"
 
 /decl/hierarchy/supply_pack/engineering/smescoil_weak
 	name = "Parts - Basic superconductive magnetic coil"
 	contains = list(/obj/item/weapon/stock_parts/smes_coil/weak)
-	cost = 25
+	cost = 250
 	containername = "basic superconductive magnetic coil crate"
 
 /decl/hierarchy/supply_pack/engineering/smescoil_super_capacity
 	name = "Parts - Superconductive capacitance coil"
 	contains = list(/obj/item/weapon/stock_parts/smes_coil/super_capacity)
-	cost = 45
+	cost = 450
 	containername = "superconductive capacitance coil crate"
 
 /decl/hierarchy/supply_pack/engineering/smescoil_super_io
 	name = "Parts- Superconductive Transmission Coil"
 	contains = list(/obj/item/weapon/stock_parts/smes_coil/super_io)
-	cost = 45
+	cost = 450
 	containername = "Superconductive Transmission Coil crate"
 
 /decl/hierarchy/supply_pack/engineering/electrical
@@ -37,7 +37,7 @@
 					/obj/item/clothing/gloves/insulated = 2,
 					/obj/item/weapon/cell = 2,
 					/obj/item/weapon/cell/high = 2)
-	cost = 15
+	cost = 150
 	containername = "electrical maintenance crate"
 
 /decl/hierarchy/supply_pack/engineering/mechanical
@@ -46,7 +46,7 @@
 					/obj/item/clothing/suit/storage/hazardvest = 3,
 					/obj/item/clothing/head/welding = 2,
 					/obj/item/clothing/head/hardhat)
-	cost = 10
+	cost = 100
 	containername = "mechanical maintenance crate"
 
 /decl/hierarchy/supply_pack/engineering/solar
@@ -56,19 +56,19 @@
 					/obj/item/weapon/tracker_electronics,
 					/obj/item/weapon/paper/solar
 					)
-	cost = 15
+	cost = 150
 	containername = "solar pack crate"
 
 /decl/hierarchy/supply_pack/engineering/solar_assembly
 	name = "Power - Solar assembly"
 	contains  = list(/obj/item/solar_assembly = 16)
-	cost = 10
+	cost = 100
 	containername = "solar assembly crate"
 
 /decl/hierarchy/supply_pack/engineering/emitter
 	name = "Equipment - Emitter"
 	contains = list(/obj/machinery/power/emitter = 2)
-	cost = 10
+	cost = 100
 	containertype = /obj/structure/closet/crate/secure/large
 	containername = "emitter crate"
 	access = access_engine_equip
@@ -77,14 +77,14 @@
 	name = "Equipment - Field generator"
 	contains = list(/obj/machinery/field_generator = 2)
 	containertype = /obj/structure/closet/crate/large
-	cost = 10
+	cost = 100
 	containername = "field generator crate"
 	access = access_ce
 
 /decl/hierarchy/supply_pack/engineering/sing_gen
 	name = "Equipment - Singularity generator"
 	contains = list(/obj/machinery/the_singularitygen)
-	cost = 10
+	cost = 100
 	containertype = /obj/structure/closet/crate/secure/large
 	containername = "singularity generator crate"
 	access = access_ce
@@ -92,7 +92,7 @@
 /decl/hierarchy/supply_pack/engineering/collector
 	name = "Power - Collector"
 	contains = list(/obj/machinery/power/rad_collector = 2)
-	cost = 8
+	cost = 600
 	containertype = /obj/structure/closet/crate/secure/large
 	containername = "collector crate"
 	access = access_engine_equip
@@ -106,7 +106,7 @@
 					/obj/structure/particle_accelerator/particle_emitter/right,
 					/obj/structure/particle_accelerator/power_box,
 					/obj/structure/particle_accelerator/end_cap)
-	cost = 40
+	cost = 400
 	containertype = /obj/structure/largecrate
 	containername = "particle accelerator crate"
 	access = access_ce
@@ -117,7 +117,7 @@
 					/obj/item/weapon/stock_parts/capacitor,
 					/obj/item/weapon/stock_parts/matter_bin,
 					/obj/item/weapon/stock_parts/circuitboard/pacman)
-	cost = 45
+	cost = 450
 	containername = "\improper P.A.C.M.A.N. Portable Generator Construction Kit"
 	containertype = /obj/structure/closet/crate/secure
 	access = access_tech_storage
@@ -128,7 +128,7 @@
 					/obj/item/weapon/stock_parts/capacitor,
 					/obj/item/weapon/stock_parts/matter_bin,
 					/obj/item/weapon/stock_parts/circuitboard/pacman/super)
-	cost = 55
+	cost = 750
 	containername = "\improper Super P.A.C.M.A.N. portable generator construction kit"
 	containertype = /obj/structure/closet/crate/secure
 	access = access_tech_storage
@@ -136,7 +136,7 @@
 /decl/hierarchy/supply_pack/engineering/teg
 	name = "Power - Mark I Thermoelectric Generator"
 	contains = list(/obj/machinery/power/generator)
-	cost = 75
+	cost = 750
 	containertype = /obj/structure/closet/crate/secure/large
 	containername = "\improper Mk1 TEG crate"
 	access = access_engine_equip
@@ -144,7 +144,7 @@
 /decl/hierarchy/supply_pack/engineering/circulator
 	name = "Equipment - Binary atmospheric circulator"
 	contains = list(/obj/machinery/atmospherics/binary/circulator)
-	cost = 60
+	cost = 600
 	containertype = /obj/structure/closet/crate/secure/large
 	containername = "atmospheric circulator crate"
 	access = access_atmospherics
@@ -152,7 +152,7 @@
 /decl/hierarchy/supply_pack/engineering/air_dispenser
 	name = "Equipment - Pipe Dispenser"
 	contains = list(/obj/machinery/pipedispenser)
-	cost = 35
+	cost = 350
 	containertype = /obj/structure/closet/crate/secure/large
 	containername = "pipe dispenser crate"
 	access = access_atmospherics
@@ -160,7 +160,7 @@
 /decl/hierarchy/supply_pack/engineering/disposals_dispenser
 	name = "Equipment - Disposals pipe dispenser"
 	contains = list(/obj/machinery/pipedispenser/disposal)
-	cost = 35
+	cost = 350
 	containertype = /obj/structure/closet/crate/secure/large
 	containername = "disposal dispenser crate"
 	access = access_atmospherics
@@ -168,7 +168,7 @@
 /decl/hierarchy/supply_pack/engineering/shield_generator
 	name = "Equipment - Shield generator construction kit"
 	contains = list(/obj/item/weapon/stock_parts/circuitboard/shield_generator, /obj/item/weapon/stock_parts/capacitor, /obj/item/weapon/stock_parts/micro_laser, /obj/item/weapon/stock_parts/smes_coil, /obj/item/weapon/stock_parts/console_screen)
-	cost = 50
+	cost = 500
 	containertype = /obj/structure/closet/crate/secure
 	containername = "shield generator construction kit crate"
 	access = access_engine
@@ -176,7 +176,7 @@
 /decl/hierarchy/supply_pack/engineering/smbig
 	name = "Power - Supermatter core"
 	contains = list(/obj/machinery/power/supermatter)
-	cost = 150
+	cost = 7500
 	containertype = /obj/structure/closet/crate/secure/large/phoron
 	containername = "\improper Supermatter crate (CAUTION)"
 	access = access_ce
@@ -184,7 +184,7 @@
 /decl/hierarchy/supply_pack/engineering/fueltank
 	name = "Liquid - Fuel tank"
 	contains = list(/obj/structure/reagent_dispensers/fueltank)
-	cost = 8
+	cost = 80
 	containertype = /obj/structure/largecrate
 	containername = "fuel tank crate"
 
@@ -194,7 +194,7 @@
 					/obj/item/weapon/storage/toolbox/electrical,
 					/obj/item/device/flash = 4,
 					/obj/item/weapon/cell/high = 2)
-	cost = 10
+	cost = 650
 	containertype = /obj/structure/closet/crate/secure/gear
 	containername = "robotics assembly crate"
 	access = access_robotics
@@ -203,7 +203,7 @@
 	name = "Gear - Radiation protection gear"
 	contains = list(/obj/item/clothing/suit/radiation = 6,
 			/obj/item/clothing/head/radiation = 6)
-	cost = 20
+	cost = 750
 	containertype = /obj/structure/closet/radiation
 	containername = "radiation suit locker"
 
@@ -215,7 +215,7 @@
 					/obj/item/weapon/stock_parts/subspace/filter,
 					/obj/item/weapon/stock_parts/subspace/crystal,
 					/obj/item/weapon/storage/toolbox/electrical)
-	cost = 75
+	cost = 750
 	containername = "emergency bluespace relay assembly kit"
 
 /decl/hierarchy/supply_pack/engineering/firefighter
@@ -225,7 +225,7 @@
 			/obj/item/weapon/tank/oxygen/red,
 			/obj/item/weapon/extinguisher,
 			/obj/item/clothing/head/hardhat/red)
-	cost = 20
+	cost = 200
 	containertype = /obj/structure/closet/firecloset
 	containername = "fire-safety closet"
 
@@ -234,7 +234,7 @@
 	contains = list(/obj/item/clothing/suit/space/void/engineering/alt,
 					/obj/item/clothing/head/helmet/space/void/engineering/alt,
 					/obj/item/clothing/shoes/magboots)
-	cost = 120
+	cost = 1700
 	containername = "engineering voidsuit crate"
 	containertype = /obj/structure/closet/crate/secure/large
 	access = access_engine

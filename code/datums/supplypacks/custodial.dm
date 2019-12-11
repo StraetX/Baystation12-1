@@ -13,7 +13,7 @@
 					/obj/item/weapon/reagent_containers/glass/rag,
 					/obj/item/weapon/grenade/chem_grenade/cleaner = 3,
 					/obj/structure/mopbucket)
-	cost = 20
+	cost = 200
 	containertype = /obj/structure/closet/crate/large
 	containername = "janitorial supplies crate"
 
@@ -21,13 +21,13 @@
 	num_contained = 3
 	contains = list(/obj/item/weapon/storage/box/mousetraps)
 	name = "Misc - Pest control"
-	cost = 10
+	cost = 100
 	containername = "pest control crate"
 
 /decl/hierarchy/supply_pack/custodial/lightbulbs
 	name = "Spares - Replacement lights"
 	contains = list(/obj/item/weapon/storage/box/lights/mixed = 3)
-	cost = 10
+	cost = 100
 	containername = "replacement lights crate"
 
 /decl/hierarchy/supply_pack/custodial/cleaning
@@ -39,14 +39,14 @@
 					/obj/item/weapon/reagent_containers/glass/rag,
 					/obj/item/weapon/reagent_containers/spray/cleaner = 2,
 					/obj/item/weapon/soap)
-	cost = 10
+	cost = 100
 	containertype = /obj/structure/closet/crate/large
 	containername = "cleaning supplies crate"
 
 /decl/hierarchy/supply_pack/custodial/bodybag
 	name = "Equipment - Body bags"
 	contains = list(/obj/item/weapon/storage/box/bodybags = 3)
-	cost = 10
+	cost = 100
 	containername = "body bag crate"
 
 /decl/hierarchy/supply_pack/custodial/janitorbiosuits
@@ -55,6 +55,6 @@
 					/obj/item/clothing/suit/bio_suit/janitor,
 					/obj/item/clothing/mask/gas,
 					/obj/item/weapon/tank/oxygen)
-	cost = 30
+	cost = 300
 	containertype = /obj/structure/closet/crate/secure
 	containername = "janitor biohazard equipment crate"
