@@ -6,7 +6,7 @@ SUBSYSTEM_DEF(supply)
 	flags = SS_NO_TICK_CHECK
 
 	//supply points //old system
-	var/points = 2500				// ND // will been - 50 //
+	var/points = 1500				// ND // will been - 50 //
 	var/points_per_process = 0
 	var/points_per_slip = 0
 	var/point_sources = list()
