@@ -5,19 +5,21 @@ SUBSYSTEM_DEF(supply)
 	//Initializes at default time
 	flags = SS_NO_TICK_CHECK
 
-	//supply points
-	var/points = 50
-	var/points_per_process = 1
-	var/points_per_slip = 2
+	//supply points //old system
+	var/points = 2500				// ND // will been - 50 //
+	var/points_per_process = 0
+	var/points_per_slip = 0
 	var/point_sources = list()
 	var/pointstotalsum = 0
 	var/pointstotal = 0
+
 	//control
 	var/ordernum
 	var/list/shoppinglist = list()
 	var/list/requestlist = list()
 	var/list/donelist = list()
 	var/list/master_supply_list = list()
+
 	//shuttle movement
 	var/movetime = 1200
 	var/datum/shuttle/autodock/ferry/supply/shuttle
@@ -46,9 +48,9 @@ SUBSYSTEM_DEF(supply)
 			point_source_descriptions[mat.display_name] = "From exported [mat.display_name]"
 
 // Just add points over time.
-/datum/controller/subsystem/supply/fire()
-	add_points_from_source(points_per_process, "time")
-
+/*/datum/controller/subsystem/supply/fire()
+	add_points_from_source(points_per_process, "time") // Outdate // ND //
+*/
 /datum/controller/subsystem/supply/stat_entry()
 	..("Points: [points]")
 
@@ -105,7 +107,15 @@ SUBSYSTEM_DEF(supply)
 							material_count[P.material.display_name] += P.get_amount() * P.material.sale_price * P.matter_multiplier
 						if(P.reinf_material && P.reinf_material.sale_price > 0)
 							material_count[P.reinf_material.display_name] += P.get_amount() * P.reinf_material.sale_price * P.matter_multiplier * 0.5
-						continue
+						continue 
+
+					//Sell Items // ND //
+					if(istype(A, /obj/item))
+						var/obj/item/I = A
+						var/price = get_value(I)
+						if(price >= 0 )
+							add_points_from_source(price)
+						continue	
 
 					// Must sell ore detector disks in crates
 					if(istype(A, /obj/item/weapon/disk/survey))
