@@ -7,7 +7,7 @@ SUBSYSTEM_DEF(supply)
 
 	//supply points //old system
 	var/points = 1500				// ND // will been - 50 //
-	var/points_per_process = 0
+	var/points_per_process = 50
 	var/points_per_slip = 0
 	var/point_sources = list()
 	var/pointstotalsum = 0
@@ -48,9 +48,9 @@ SUBSYSTEM_DEF(supply)
 			point_source_descriptions[mat.display_name] = "From exported [mat.display_name]"
 
 // Just add points over time.
-/*/datum/controller/subsystem/supply/fire()
+/datum/controller/subsystem/supply/fire()
 	add_points_from_source(points_per_process, "time") // Outdate // ND //
-*/
+
 /datum/controller/subsystem/supply/stat_entry()
 	..("Points: [points]")
 
