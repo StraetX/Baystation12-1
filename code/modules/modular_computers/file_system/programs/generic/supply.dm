@@ -59,7 +59,7 @@
 		data["shopping_cart_length"] = SSsupply.shoppinglist.len
 		data["request_length"] = SSsupply.requestlist.len
 	data["screen"] = screen
-	data["credits"] = "[SSsupply.points]"
+	data["talers"] = "[SSsupply.points]"
 	data["currency"] = GLOB.using_map.supply_currency_name
 	data["currency_short"] = GLOB.using_map.supply_currency_name_short
 	switch(screen)
@@ -77,7 +77,7 @@
 			for(var/tag in SSsupply.point_source_descriptions)
 				var/entry = list()
 				entry["desc"] = SSsupply.point_source_descriptions[tag]
-				entry["points"] = SSsupply.point_sources[tag] || 0
+				entry["talers"] = SSsupply.point_sources[tag] || 0
 				point_breakdown += list(entry) //Make a list of lists, don't flatten
 			data["point_breakdown"] = point_breakdown
 			data["can_print"] = can_print()

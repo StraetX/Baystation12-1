@@ -55,6 +55,10 @@
 
 	var/required_language
 
+	// ND Economy DATA // Variable Generalization //
+	var/account_number = null
+	var/remote_access_pin = null
+
 /datum/job/New()
 
 	if(prob(100-availablity_chance))	//Close positions, blah blah.
@@ -111,7 +115,7 @@
 	. = . || outfit_type
 	. = outfit_by_type(.)
 
-/datum/job/proc/setup_account(var/mob/living/carbon/human/H)
+/datum/job/proc/setup_account(var/mob/living/carbon/human/H, var/obj/item/weapon/card/id/id_card)
 	if(!account_allowed || (H.mind && H.mind.initial_account))
 		return
 
@@ -139,11 +143,17 @@
 		return // You are too poor for an account.
 
 	//give them an account in the station database
+
 	var/datum/money_account/M = create_account("[H.real_name]'s account", H.real_name, money_amount)
+
+	// ND Economy DATA //
+	account_number = M.account_number
+	remote_access_pin = M.remote_access_pin
+	
 	if(H.mind)
 		var/remembered_info = ""
-		remembered_info += "<b>Your account number is:</b> #[M.account_number]<br>"
-		remembered_info += "<b>Your account pin is:</b> [M.remote_access_pin]<br>"
+		remembered_info += "<b>Your account number is:</b> #[account_number]<br>" // It was M.account_number (ND)
+		remembered_info += "<b>Your account pin is:</b> [remote_access_pin]<br>"  // It was M.remote_access_pin (ND)
 		remembered_info += "<b>Your account funds are:</b> T[M.money]<br>"
 
 		if(M.transaction_log.len)

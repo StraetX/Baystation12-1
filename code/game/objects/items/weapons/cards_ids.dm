@@ -163,6 +163,12 @@ var/const/NO_EMAG_ACT = -50
 	item_state = "card-id"
 	slot_flags = SLOT_ID
 
+	// ND Economy Vars //
+	var/list/dat = list("<table><tr><td>")
+	var/account_number
+	var/remote_access_pin
+
+	// Origin Vars //
 	var/list/access = list()
 	var/registered_name = "Unknown" // The name registered_name on the card
 	var/associated_account_number = 0
@@ -173,6 +179,7 @@ var/const/NO_EMAG_ACT = -50
 	var/dna_hash = "\[UNSET\]"
 	var/fingerprint_hash = "\[UNSET\]"
 	var/sex = "\[UNSET\]"
+
 	var/icon/front
 	var/icon/side
 
@@ -194,6 +201,7 @@ var/const/NO_EMAG_ACT = -50
 
 /obj/item/weapon/card/id/Initialize()
 	.=..()
+
 	if(job_access_type)
 		var/datum/job/j = SSjobs.get_by_path(job_access_type)
 		if(j)
@@ -244,7 +252,7 @@ var/const/NO_EMAG_ACT = -50
 	popup.open()
 	return
 
-/obj/item/weapon/card/id/proc/get_display_name()
+/obj/item/weapon/card/id/proc/get_display_name(var/datum/money_account/account_number, var/datum/money_account/remote_access_pin)
 	. = registered_name
 	if(military_rank && military_rank.name_short)
 		. ="[military_rank.name_short] [.][formal_name_suffix]"
@@ -291,11 +299,15 @@ var/const/NO_EMAG_ACT = -50
 	if(GLOB.using_map.flags & MAP_HAS_RANK)
 		id_card.military_rank = char_rank
 
-/obj/item/weapon/card/id/proc/dat()
-	var/list/dat = list("<table><tr><td>")
+/obj/item/weapon/card/id/proc/dat(var/datum/job/E)
+	account_number = E.account_number
+	remote_access_pin = E.remote_access_pin
+
 	dat += text("Name: []</A><BR>", "[formal_name_prefix][registered_name][formal_name_suffix]")
 	dat += text("Sex: []</A><BR>\n", sex)
 	dat += text("Age: []</A><BR>\n", age)
+	dat += text("Account Number: []</A><BR>\n", "[account_number]") // ND Economy DATA //
+	dat += text("PIN: []</A><BR>\n", "[remote_access_pin]")         // ND Economy DATA //
 
 	if(GLOB.using_map.flags & MAP_HAS_BRANCH)
 		dat += text("Branch: []</A><BR>\n", military_branch ? military_branch.name : "\[UNSET\]")
